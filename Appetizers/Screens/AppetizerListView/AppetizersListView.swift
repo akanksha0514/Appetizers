@@ -10,8 +10,6 @@ import SwiftUI
 struct AppetizersListView: View {
   
   @StateObject var viewModel: AppetizerListViewModel // if you're initialising a viewmodel you need a state object, if you're passing the viewmodel in from another previous view because you needed data from that view use observed object
-  @State var isShowingDetail: Bool = false
-  @State private var selectedAppetizer: Appetizer?
   
   var body: some View {
     ZStack {
@@ -19,21 +17,21 @@ struct AppetizersListView: View {
         List(viewModel.appetizers) { appetizer in
           AppetizerCellView(appetizer: appetizer)
             .onTapGesture {
-              selectedAppetizer = appetizer
-              isShowingDetail = true
+              viewModel.selectedAppetizer = appetizer
+              viewModel.isShowingDetail = true
             }
         }
         .listStyle(.plain)
         .navigationTitle("Appetizers")
-        .disabled(isShowingDetail)
+        .disabled(viewModel.isShowingDetail)
       }.onAppear {
         viewModel.getAppetizers()
       }
-      .blur(radius: isShowingDetail ? 20 : 0)
+      .blur(radius: viewModel.isShowingDetail ? 20 : 0)
       
-      if isShowingDetail {
-        AppetizersDetailCardView(appetizer: selectedAppetizer!,
-                                 isShowDetailView: $isShowingDetail)
+      if viewModel.isShowingDetail {
+        AppetizersDetailCardView(appetizer: viewModel.selectedAppetizer!,
+                                 isShowDetailView: $viewModel.isShowingDetail)
       }
       
       if viewModel.inProgress {

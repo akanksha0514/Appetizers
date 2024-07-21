@@ -27,33 +27,9 @@ struct AppetizersDetailCardView: View {
           .padding()
         
         HStack(spacing: 40) {
-          VStack(spacing: 5) {
-            Text("Calories")
-              .bold()
-              .font(.caption)
-            Text("\(String(appetizer.calories))gm")
-              .foregroundStyle(.secondary)
-              .fontWeight(.semibold)
-              .italic()
-          }
-          VStack(spacing: 5)  {
-            Text("Carbs")
-              .bold()
-              .font(.caption)
-            Text("\(String(appetizer.carbs))gm")
-              .foregroundStyle(.secondary)
-              .fontWeight(.semibold)
-              .italic()
-          }
-          VStack(spacing: 5)  {
-            Text("Protein")
-              .bold()
-              .font(.caption)
-            Text("\(String(appetizer.protein))gm")
-              .foregroundStyle(.secondary)
-              .fontWeight(.semibold)
-              .italic()
-          }
+          NutrientsDetailsView(title: "Calories", titleValue: "\(String(appetizer.calories))gm")
+          NutrientsDetailsView(title: "Carbs", titleValue: "\(String(appetizer.carbs))gm")
+          NutrientsDetailsView(title: "Protein", titleValue: "\(String(appetizer.protein))gm")
         }
       }
       
@@ -62,14 +38,8 @@ struct AppetizersDetailCardView: View {
       Button {
         // add action
       } label: {
-        Text("$\(appetizer.price, specifier: "%.2f") - Add To Order")
-          .font(.callout)
-          .fontWeight(.semibold)
+        APButton(buttonText: "$\(appetizer.price, specifier: "%.2f") - Add To Order")
       }
-      .frame(maxWidth: .infinity, maxHeight: 50)
-      .foregroundStyle(.white)
-      .background(.brandPrimary)
-      .cornerRadius(8)
       .padding()
       
     }
@@ -81,16 +51,7 @@ struct AppetizersDetailCardView: View {
       Button {
         isShowDetailView = false
       } label: {
-        ZStack{
-          Circle()
-            .frame(width: 30, height: 30)
-            .foregroundColor(.white)
-            .opacity(0.6)
-          Image(systemName: "xmark")
-            .imageScale(.small)
-            .frame(width: 44, height: 44)
-            .foregroundColor(.black)
-        }
+        APCloseButton()
       }
     }
   }

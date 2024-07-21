@@ -13,6 +13,8 @@ final class AppetizerListViewModel: ObservableObject {
   @Published var appetizers: [Appetizer] = [] // remember observable object needs to broadcast when it changes
   @Published var alertItem: ErrorAlert?
   @Published var inProgress: Bool = false
+  @Published var isShowingDetail: Bool = false
+  @Published var selectedAppetizer: Appetizer?
   
   func getAppetizers() {
     inProgress = true

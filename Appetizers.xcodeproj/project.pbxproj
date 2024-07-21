@@ -27,6 +27,9 @@
 		766CAA4F2C4D3ABD00727BCD /* ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766CAA4E2C4D3ABD00727BCD /* ErrorAlert.swift */; };
 		766CAA512C4D89C400727BCD /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766CAA502C4D89C400727BCD /* RemoteImage.swift */; };
 		766CAA5E2C4D909100727BCD /* AppetizersDetailCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766CAA5D2C4D909100727BCD /* AppetizersDetailCardView.swift */; };
+		766CAA612C4DC7DD00727BCD /* APButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766CAA602C4DC7DD00727BCD /* APButton.swift */; };
+		766CAA632C4DC89700727BCD /* APCloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766CAA622C4DC89700727BCD /* APCloseButton.swift */; };
+		766CAA672C4DC9F400727BCD /* NutrientsDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766CAA662C4DC9F400727BCD /* NutrientsDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,9 @@
 		766CAA4E2C4D3ABD00727BCD /* ErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlert.swift; sourceTree = "<group>"; };
 		766CAA502C4D89C400727BCD /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		766CAA5D2C4D909100727BCD /* AppetizersDetailCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizersDetailCardView.swift; sourceTree = "<group>"; };
+		766CAA602C4DC7DD00727BCD /* APButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APButton.swift; sourceTree = "<group>"; };
+		766CAA622C4DC89700727BCD /* APCloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APCloseButton.swift; sourceTree = "<group>"; };
+		766CAA662C4DC9F400727BCD /* NutrientsDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientsDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +177,7 @@
 		766CAA522C4D8D1A00727BCD /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				766CAA642C4DC9C700727BCD /* AppetizerDetailView */,
 				766CAA0F2C4C837800727BCD /* AppetizersTabView.swift */,
 				766CAA532C4D8D2400727BCD /* AppetizerListView */,
 				766CAA552C4D8D3D00727BCD /* AccountView */,
@@ -240,6 +247,7 @@
 		766CAA5A2C4D8DE900727BCD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				766CAA5F2C4DC7D200727BCD /* Button */,
 				766CAA5C2C4D8DFB00727BCD /* Image */,
 				766CAA5B2C4D8DF000727BCD /* Cells */,
 			);
@@ -260,6 +268,31 @@
 				766CAA502C4D89C400727BCD /* RemoteImage.swift */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		766CAA5F2C4DC7D200727BCD /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				766CAA602C4DC7DD00727BCD /* APButton.swift */,
+				766CAA622C4DC89700727BCD /* APCloseButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		766CAA642C4DC9C700727BCD /* AppetizerDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				766CAA652C4DC9D300727BCD /* InnerView */,
+			);
+			path = AppetizerDetailView;
+			sourceTree = "<group>";
+		};
+		766CAA652C4DC9D300727BCD /* InnerView */ = {
+			isa = PBXGroup;
+			children = (
+				766CAA662C4DC9F400727BCD /* NutrientsDetailsView.swift */,
+			);
+			path = InnerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,14 +431,17 @@
 				766CAA102C4C837800727BCD /* AppetizersTabView.swift in Sources */,
 				766CAA4B2C4D2E4E00727BCD /* APError.swift in Sources */,
 				766CAA5E2C4D909100727BCD /* AppetizersDetailCardView.swift in Sources */,
+				766CAA612C4DC7DD00727BCD /* APButton.swift in Sources */,
 				766CAA4F2C4D3ABD00727BCD /* ErrorAlert.swift in Sources */,
 				766CAA3D2C4C853400727BCD /* AppetizersListView.swift in Sources */,
 				766CAA412C4C854B00727BCD /* OrderView.swift in Sources */,
 				766CAA4D2C4D358A00727BCD /* AppetizerListViewModel.swift in Sources */,
+				766CAA632C4DC89700727BCD /* APCloseButton.swift in Sources */,
 				766CAA512C4D89C400727BCD /* RemoteImage.swift in Sources */,
 				766CAA1A2C4C837900727BCD /* Appetizers.xcdatamodeld in Sources */,
 				766CAA432C4D232300727BCD /* Appetizer.swift in Sources */,
 				766CAA452C4D272100727BCD /* AppetizerCellView.swift in Sources */,
+				766CAA672C4DC9F400727BCD /* NutrientsDetailsView.swift in Sources */,
 				766CAA0E2C4C837800727BCD /* AppetizersApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
