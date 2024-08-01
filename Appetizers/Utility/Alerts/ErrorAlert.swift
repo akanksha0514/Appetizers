@@ -36,3 +36,27 @@ struct ErrorAlertContext {
                                            message: Text("Unable to complete the request. Please check your internet connection!"),
                                            dismissButton: .default(Text("Ok")))
 }
+
+struct ValidationErrorAlert {
+  static let emptyFields = ErrorAlert(id: UUID(),
+                                      title: Text("Incomplete Form"),
+                                      message: Text("Please make sure to enter First name, Last name and email address to save changes"),
+                                      dismissButton: .default(Text("Ok")))
+  
+  static let invalidEmail = ErrorAlert(id: UUID(),
+                                     title: Text("Invalid Email"),
+                                     message: Text("The email entered is invalid. Please check again!"),
+                                     dismissButton: .default(Text("Ok")))
+}
+
+struct SaveUserAlert {
+  static let success = ErrorAlert(id: UUID(),
+                                      title: Text("Success!"),
+                                      message: Text("Changes made to form has been saved successfully!"),
+                                      dismissButton: .default(Text("Ok")))
+  
+  static let failure = ErrorAlert(id: UUID(),
+                                     title: Text("Failed!"),
+                                     message: Text("Unable to save changes to form. Try again later!"),
+                                     dismissButton: .default(Text("Ok")))
+}
